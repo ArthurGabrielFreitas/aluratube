@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  padding: 16px;
+  padding: 16px 0px 16px 16px;
   overflow: hidden;
   h2 {
     font-size: 16px;
@@ -20,11 +20,9 @@ export const StyledTimeline = styled.div`
   }
   section {
     width: 100%;
-    padding: 0;
     overflow: hidden;
     padding: 16px;
     div {
-      
       width: calc(100vw - 16px * 4);
       display: grid;
       grid-gap: 16px;
@@ -42,6 +40,23 @@ export const StyledTimeline = styled.div`
           color: ${({ theme }) => theme.textColorBase || "#222222"};
         }
       }
+    }
+  }
+  .favorites {
+      display: grid;
+      grid-gap: 65px;
+      grid-template-columns: repeat(auto-fill,minmax(103px,1fr));
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(103px,1fr);
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    img {
+      width: 103px;
+      height: 103px;
+      border-radius: 50%;
+    }
+    span {
+      text-align: center;
     }
   }
 `;

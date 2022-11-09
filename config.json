@@ -1,7 +1,10 @@
 {
-    "name": "Arthur Gabriel",
-    "job": "Backend Developer",
-    "github": "ArthurGabrielFreitas",
+    "user_info": {
+        "banner": "https://images.unsplash.com/photo-1665937832097-832d1e08cf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
+        "name": "Arthur Gabriel",
+        "job": "Backend Developer",
+        "github": "ArthurGabrielFreitas"
+    },
     "playlists": {
         "jogos": [
             {
@@ -10,7 +13,7 @@
                 "thumb": "https://img.youtube.com/vi/QsqatJxAUtk/hqdefault.jpg"
             },
             {
-                "title": "Frostpunk - Neve e Steak tartare",
+                "title": "Remakes MAIS IMPORTANTES de Pokémon - Retrospectiva Pokémon Fire Red e Leaf Green",
                 "url": "https://www.youtube.com/watch?v=O8jtAyPuhNg",
                 "thumb": "https://img.youtube.com/vi/O8jtAyPuhNg/hqdefault.jpg"
             },
@@ -52,7 +55,7 @@
                 "thumb": "https://img.youtube.com/vi/jOAU81jdi-c/hqdefault.jpg"
             },
             {
-                "title": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
+                "title": "LANDING PAGE COM HTML e CSS!",
                 "url": "https://www.youtube.com/watch?v=llF6vD-RljE",
                 "thumb": "https://img.youtube.com/vi/llF6vD-RljE/hqdefault.jpg"
             },
@@ -99,7 +102,7 @@
                 "thumb": "https://img.youtube.com/vi/dvd3pNYh7So/hqdefault.jpg"
             },
             {
-                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON",
+                "title": "CRUD Angular + Spring | 29: Atualizar Curso: Salvando o Formulário",
                 "url": "https://www.youtube.com/watch?v=8q36rNS5yVo",
                 "thumb": "https://img.youtube.com/vi/8q36rNS5yVo/hqdefault.jpg"
             },
@@ -129,5 +132,22 @@
                 "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
             }
         ]
-    }
+    },
+    "favorites": [
+        {
+            "channel_name": "GameGrumps",
+            "channel_url": "https://www.youtube.com/user/GameGrumps",
+            "channel_img": "https://yt3.ggpht.com/ytc/AMLnZu9S4y9ZPtBpePs6XSbzpZ4SgU5AOPmPgpnFuL6uqg=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "channel_name": "Felps",
+            "channel_url": "https://www.youtube.com/c/Felps",
+            "channel_img": "https://yt3.ggpht.com/v-E0zKEhzTKVF46HdajT4pq-o1NTkeyD03VO5QeOGeTySwx0tehIevbkaOLpThYFgyznRkPuYw=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "channel_name": "Kurzgesagt – In a Nutshell",
+            "channel_url": "https://www.youtube.com/c/inanutshell",
+            "channel_img": "https://yt3.ggpht.com/ytc/AMLnZu8giocL5QtOHe8hLjl6xNobvGl8ZQS05wVFmybVCg=s88-c-k-c0x00ffffff-no-rj"
+        }
+    ]
 }
