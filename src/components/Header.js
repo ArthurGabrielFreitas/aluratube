@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
+background-color: ${({ theme }) => theme.backgroundLevel1};
 
     .banner-img {
         height: 230px;

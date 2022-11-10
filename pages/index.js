@@ -1,6 +1,5 @@
 import React from "react";
 import config from "../config.json"
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledHeader } from "../src/components/Header";
@@ -10,7 +9,6 @@ function HomePage() {
 
     return (
         <>
-            <CSSReset />
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -77,7 +75,11 @@ function Timeline({searchValue, ...params}) {
             <section key="favorite">
                 <h2>Favoritos</h2>
                 <div className="favorites">
-                    {favorites.map((favorite) => {
+                    {favorites.filter((favorite) => {
+                        const nomeNormalized = favorite.channel_name.toLowerCase();
+                        const searchValueNormalized = searchValue.toLowerCase();
+                        return nomeNormalized.includes(searchValueNormalized);
+                    }).map((favorite) => {
                         return (
                             <a key={favorite.channel_url} href={favorite.channel_url}>
                                 <img src={favorite.channel_img} alt="" />

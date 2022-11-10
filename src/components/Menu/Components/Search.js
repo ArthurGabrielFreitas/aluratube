@@ -46,7 +46,6 @@ export default function Search({ valorFiltro, setValorFiltro }) {
   return (
     <StyledSearch>
       <input type="text" onChange={(e) => setValorBusca(e.target.value)} value={valorBusca} />
-      {valorBusca}
       <button>
         🔎
       </button>
