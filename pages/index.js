@@ -3,9 +3,25 @@ import config from "../config.json"
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledHeader } from "../src/components/Header";
+import { videoService } from "../src/components/services/VideoService";
 
 function HomePage() {
+    const service = videoService();
     const [valorFiltro, setValorFiltro] = React.useState("");
+    const [playlists, setPlaylists] = React.useState({});
+    const favorites = {};
+
+    React.useEffect(() => {
+        service.getAllVideos()
+            .then((dados) => {
+                const novasPlaylists = { ...playlists };
+                dados.data.forEach((video) => {
+                    if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                    novasPlaylists[video.playlist].push(video);
+                })
+                setPlaylists(novasPlaylists);
+            });
+    }, []);
 
     return (
         <>
@@ -14,9 +30,9 @@ function HomePage() {
                 flexDirection: "column",
                 flex: 1,
             }}>
-                <Menu valorFiltro={valorFiltro} setValorFiltro={setValorFiltro}/>
+                <Menu valorFiltro={valorFiltro} setValorFiltro={setValorFiltro} />
                 <Header user_info={config.user_info} />
-                <Timeline searchValue={valorFiltro} playlists={config.playlists} favorites={config.favorites} />
+                <Timeline searchValue={valorFiltro} playlists={playlists} favorites={config.favorites} />
             </div>
         </>
     );
@@ -43,7 +59,7 @@ function Header(params) {
     )
 }
 
-function Timeline({searchValue, ...params}) {
+function Timeline({ searchValue, ...params }) {
     const playlistNames = Object.keys(params.playlists);
     const favorites = params.favorites;
     return (
